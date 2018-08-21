@@ -14,7 +14,7 @@
         <input formControlName="password" type="password" class="form-control" placeholder="password">
     </div>
     <ap-vmessage 
-        *ngIf="loginForm.get('userName').errors?.required" 
+        *ngIf="loginForm.get('password').errors?.required" 
         text="Password is required!">
     </ap-vmessage>
 
