@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppComponent } from './app.component';
 import { PhotosModule } from './photos/photos.module';
@@ -18,7 +19,8 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     ErrorsModule,
     HomeModule,
-    CoreModule
+    CoreModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

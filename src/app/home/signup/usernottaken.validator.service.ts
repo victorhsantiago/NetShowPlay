@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { AbstractControl } from '@angular/forms';
-
 import { SignUpService } from './signup.service';
+import { AbstractControl } from '@angular/forms';
 import { debounceTime, switchMap, map, first } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
@@ -13,14 +12,13 @@ export class UserNotTakenService {
     checkUserNameTaken() {
         return (control: AbstractControl) => {
             return control
-                .valueChanges
-                .pipe(debounceTime(300))
-                .pipe(switchMap(userName =>
-                    this.signUpService.checkUserNameTaken(userName)
-                ))
-                .pipe(map(isTaken => isTaken ? { userNameTaken: true } : null
-                ))
-                .pipe(first()) 
+            .valueChanges
+            .pipe(debounceTime(300))
+            .pipe(switchMap(userName => this.signUpService.checkUserNameTaken(userName)))
+            .pipe(map(isTaken => {
+                isTaken ? { userNameTaken: true } : null
+            }))
+                .pipe(first())
         }
     }
 }
