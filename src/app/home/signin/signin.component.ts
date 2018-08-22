@@ -10,6 +10,7 @@ import { PlatformDetectorService } from '../../core/platform-detector/platform-d
 })
 
 export class SignInComponent implements OnInit {
+    
     loginForm: FormGroup;
     @ViewChild('userNameInput') userNameInput: ElementRef<HTMLInputElement>
 
@@ -25,6 +26,9 @@ export class SignInComponent implements OnInit {
             userName: ['', Validators.required],
             password: ['', Validators.required]
         })
+
+        this.platformDetector.isPlatformBrowser() &&
+        this.userNameInput.nativeElement.focus()
 
     }
 
