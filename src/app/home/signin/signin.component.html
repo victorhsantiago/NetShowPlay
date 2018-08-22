@@ -1,6 +1,6 @@
 <h4 class="text-center">Login</h4>
 
-<form [formGroup]="loginForm" class="form mt-4" (submit)="login()">
+<form [formGroup]="loginForm" class="form mt-4 p-5" (submit)="login()">
 
     <div class="form-group">
         <input #userNameInput formControlName="userName" class="form-control" placeholder="user name" autofocus>
@@ -21,7 +21,7 @@
     <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary btn-block">
         Login
     </button>
-
+    
+    <p>Not a user? <a [routerLink]="['signup']">Register now</a></p>
 </form>
 
-<p>Not a user? <a [routerLink]="['signup']">Register now</a></p>
