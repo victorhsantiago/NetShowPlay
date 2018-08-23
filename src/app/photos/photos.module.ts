@@ -4,6 +4,7 @@ import { PhotoFormModule } from './photo-form/photo-form.module';
 import { PhotoListModule } from './photo-list/photo-list.module';
 import { CardModule } from '../shared/components/card/card.module';
 import { DarkenOnHoverModule } from '../shared/directives/darken-on-hover/darken-on-hover.module';
+import { StreamComponent } from './stream/stream.component';
 
 @NgModule({
     imports: [ 
@@ -11,6 +12,7 @@ import { DarkenOnHoverModule } from '../shared/directives/darken-on-hover/darken
         PhotoFormModule,
         PhotoListModule,
         DarkenOnHoverModule
-    ]
+    ],
+    declarations: [StreamComponent]
 })
 export class PhotosModule {}

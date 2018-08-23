@@ -1,23 +1,30 @@
 <div class="container">
-	<form [formGroup]="photoForm" class="row" (submit)="upload()">
-		<div class="col-md-6 text-center">
-			<input formControlName="file" 
-				type="file" 
-				accept="image/*" 
-				(change)="file = $event.target.file[0]"
-			>
-			<ap-vmessage
-				text="Please, select a photo"
-				*ngIf="photoForm.get('file').errors?.required">
-			</ap-vmessage>
+	<form [formGroup]="photoForm" class="row p-5" (submit)="upload()">
+
+		<div class="col-md-6 text-center align-middle">
+			<div class="form-group" *ngIf="!preview; else previewImage">
+				<button type="button" (click)="fileInput.click()" class="btn btn-primary">
+					<i class="fa fa-film fa-4x align-middle"></i>
+				</button>
+
+				<input #fileInput hidden formControlName="file" type="file" accept="image/*" (change)="handFile($event.target.files[0])">
+				<ap-vmessage text="Please, select a video to upload" *ngIf="photoForm.get('file').errors?.required">
+				</ap-vmessage>
+			</div>
+
+			<ng-template #previewImage>
+				<div class="text-center">
+					<ap-photo [url]="preview" title="Preview">
+					</ap-photo>
+				</div>
+			</ng-template>
+
 		</div>
 
 		<div class="col-md-6">
 			<div class="form-group">
-				<textarea formControlName="description" class="form-control form-control-sm" placeholder="photo description"></textarea>
-				<ap-vmessage
-					text="Max length is 300"
-					*ngIf="photoForm.get('description').errors?.maxlength">
+				<textarea formControlName="description" class="form-control form-control-sm" placeholder="video description"></textarea>
+				<ap-vmessage text="Max length is 300" *ngIf="photoForm.get('description').errors?.maxlength">
 				</ap-vmessage>
 			</div>
 
