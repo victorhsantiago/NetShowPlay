@@ -1,0 +1,39 @@
+<!-- <footer class="mt-5" *ngIf="(user$ | async) as user">
+    <div class="fixed-bottom bg-white p-1">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-6">
+                    <a [routerLink]="['']">
+                        <i class="fa fa-home fa-2x"></i>
+                    </a>
+                </div>
+                <div class="col-6">
+                    <a [routerLink]="['p', 'add']">
+                        <i class="fa fa-plus-circle fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer> -->
+
+
+<div class="row" *ngIf="(user$ | async) as user">
+        <div class="col-md-2  bg-light" showMenu>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link text-info" [routerLink]="['']"><i class="fa fa-home"></i> Home</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link text-info" [routerLink]="['/iniciarTransmissao']"><i class="fa fa-rss" aria-hidden="true"></i> Start streaming</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link text-info" [routerLink]="['/p/add']"><i class="fa fa-upload" aria-hidden="true"></i> Upload</a>
+                </li>
+            </ul>
+        </div>
+      
+        <div class="col-md-10">
+            <router-outlet></router-outlet>
+        </div>
+      </div>
