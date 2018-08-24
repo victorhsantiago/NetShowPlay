@@ -4,19 +4,16 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RequestInterceptor } from './auth/request.interceptor';
-import { FooterComponent } from './footer/footer.component';
-import { SideBarComponent } from './side-bar/side-bar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
     declarations: [
         HeaderComponent,
-        FooterComponent,
-        SideBarComponent
+        SidebarComponent
     ],
     exports: [
         HeaderComponent,
-        FooterComponent,
-        SideBarComponent
+        SidebarComponent
     ],
     imports: [
         CommonModule,
