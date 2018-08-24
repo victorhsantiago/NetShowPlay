@@ -7,6 +7,10 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { PhotoListResolver } from './photos/photo-list/photo-list.resolver';
 import { AuthGuard } from './core/auth/auth.guard';
 import { PhotoDetailComponent } from './photos/photo-detail/photo-detail.component';
+import { CanaisComponent } from './core/canais/canais.component';
+import { GestaoVideosComponent } from './core/gestao-videos/gestao-videos.component';
+import { MinhaContaComponent } from './core/minha-conta/minha-conta.component';
+import { MetricasComponent } from './core/metricas/metricas.component';
 
 const routes: Routes = [
     {
@@ -29,6 +33,22 @@ const routes: Routes = [
         path: 'p/add', 
         component: PhotoFormComponent,
         canActivate: [AuthGuard]
+    },
+    { 
+        path: 'p/canais', 
+        component: CanaisComponent,
+    },
+    { 
+        path: 'p/gestao-videos', 
+        component: GestaoVideosComponent,
+    },
+    { 
+        path: 'p/minha-conta', 
+        component: MinhaContaComponent,
+    },
+    { 
+        path: 'p/metricas', 
+        component: MetricasComponent,
     },
     { 
         path: 'p/:photoId', 
