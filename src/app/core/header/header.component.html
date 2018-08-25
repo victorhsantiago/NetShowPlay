@@ -1,30 +1,21 @@
 <header class="fixed-top">
-    <nav class="navbar navbar-light bg-white">
+    <nav class="navbar navbar-light shadow-sm bg-light m-0">
         <a><img style="height: 2.25em" src="./../../../assets/img/logo.png"></a>
 
-        <!-- <div *ngIf="(user$ | async) as user; else login">
-            <i class="fa fa-user-circle"></i>
-            <a class="ml-2">{{ user.name }}</a>
-            <a class="ml-2" (click)="logout()">(Logout)</a>
-        </div> -->
 
         <div class="btn-group open text-light" *ngIf="(user$ | async) as user; else login">
             <a class="btn btn-primary" [routerLink]="['/p/minha-conta']"><i class="fa fa-user fa-fw"></i>{{user.name}}</a>
             <a class="btn btn-primary" (click)="logout()"><i class="fa fa-sign-out"></i></a>
         </div>
 
-        <!-- <ng-template #login>
-            <span class="navbar-text">
-                <a [routerLink]="''">Plase, login!</a>
-            </span>
-        </ng-template> -->
-
         <ng-template #login>
             <div class="btn-group open text-light">
                 <a class="btn btn-primary" [routerLink]="''"><i class="fa fa-sign-out"></i> Login</a>
             </div>
         </ng-template>
-
     </nav>
+    <div class="fixed-top">
+        <ap-alert></ap-alert>
+    </div>
 </header>
 <router-outlet *ngIf="!(user$ | async) as user"></router-outlet>
