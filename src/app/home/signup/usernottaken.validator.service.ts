@@ -12,12 +12,12 @@ export class UserNotTakenService {
     checkUserNameTaken() {
         return (control: AbstractControl) => {
             return control
-            .valueChanges
-            .pipe(debounceTime(300))
-            .pipe(switchMap(userName => this.signUpService.checkUserNameTaken(userName)))
-            .pipe(map(isTaken => {
-                isTaken ? { userNameTaken: true } : null
-            }))
+                .valueChanges
+                .pipe(debounceTime(300))
+                .pipe(switchMap(userName => this.signUpService.checkUserNameTaken(userName)))
+                .pipe(map(isTaken => {
+                    isTaken ? { userNameTaken: true } : null
+                }))
                 .pipe(first())
         }
     }
