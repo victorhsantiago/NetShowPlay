@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NewUser } from './new-user';
 
-const API = 'http://localhost:3000';
+const API = 'netshowplay.firebaseapp.com';
 
 @Injectable({ providedIn: 'root' })
 
