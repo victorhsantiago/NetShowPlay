@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import { Photo } from "./photo";
 import { PhotoComment } from './photo-comment';
 
-const API = 'netshowplay.firebaseapp.com';
+const API = 'https://netshowplay.firebaseio.com';
 
 @Injectable({ providedIn: 'root' })
 export class PhotoService {

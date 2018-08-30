@@ -1,11 +1,11 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: "AIzaSyANIcjTCjk1PNzwrlPTQ4fu2tVIovwfNck",
-    authDomain: "netshowplay.firebaseapp.com",
-    databaseURL: "https://netshowplay.firebaseio.com",
-    projectId: "netshowplay",
-    storageBucket: "netshowplay.appspot.com",
-    messagingSenderId: "823660835346"
+    apiKey: "AIzaSyCz7Ydzh8WpSLezYNCWtqh4xFIJUuMhs7c",
+    authDomain: "netshowplay-b51be.firebaseapp.com",
+    databaseURL: "https://netshowplay-b51be.firebaseio.com",
+    projectId: "netshowplay-b51be",
+    storageBucket: "netshowplay-b51be.appspot.com",
+    messagingSenderId: "158306214054"
   }
 };

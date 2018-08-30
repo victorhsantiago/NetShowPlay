@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { UserService } from '../user/user.service';
 
-const API_URL = 'netshowplay.firebaseapp.com';
+const API_URL = 'https://netshowplay.firebaseio.com';
 
 @Injectable({
   providedIn: 'root'
