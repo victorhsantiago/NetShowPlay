@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyANIcjTCjk1PNzwrlPTQ4fu2tVIovwfNck",
+    authDomain: "netshowplay.firebaseapp.com",
+    databaseURL: "https://netshowplay.firebaseio.com",
+    projectId: "netshowplay",
+    storageBucket: "netshowplay.appspot.com",
+    messagingSenderId: "823660835346"
+  }
+
 };
 
 /*
